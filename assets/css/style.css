@@ -135,7 +135,7 @@ body {
   width: calc(100% - 300px);
   left: 300px;
   min-height: 100vh;
-  background: var(--white);
+  background-color: rgb(255,255,255);
   transition: 0.5s;
 }
 .main.active {
@@ -218,11 +218,12 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
+  
 }
 
 .cardBox .card {
   position: relative;
-  background: var(--white);
+  background-color: rgb(211, 210, 210);
   padding: 30px;
   border-radius: 20px;
   display: flex;
@@ -239,7 +240,7 @@ body {
 }
 
 .cardBox .card .cardName {
-  color: var(--black2);
+  color: white;
   font-size: 1.1rem;
   margin-top: 5px;
 }
@@ -257,8 +258,12 @@ body {
 .cardBox .card:hover .iconBx {
   color: var(--white);
 }
+#done,#eye, #cart, #laptop{
+  color:rgb(165,161,161);
+}
 
-/* ================== Order Details List ============== */
+
+/* ================== Tickets Details List ============== */
 .details {
   position: relative;
   width: 100%;
@@ -269,20 +274,22 @@ body {
   /* margin-top: 10px; */
 }
 
-.details .recentOrders {
+.details .recentBugs {
   position: relative;
   display: grid;
   min-height: 500px;
-  background: var(--white);
-  padding: 20px;
+  background-color: rgb(211, 210, 210);
+ padding: 20px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
 }
 
 .details .cardHeader {
   display: flex;
+  padding-bottom: -52px;
   justify-content: space-between;
   align-items: flex-start;
+ 
 }
 .cardHeader h2 {
   font-weight: 600;
@@ -305,62 +312,35 @@ body {
 .details table thead td {
   font-weight: 600;
 }
-.details .recentOrders table tr {
+.details .recentBugs table tr {
   color: var(--black1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.details .recentOrders table tr:last-child {
+.details .recentBugs table tr:last-child {
   border-bottom: none;
 }
-.details .recentOrders table tbody tr:hover {
+.details .recentBugs table tbody tr:hover {
   background: var(--blue);
   color: var(--white);
 }
-.details .recentOrders table tr td {
+.details .recentBugs table tr td {
   padding: 10px;
 }
-.details .recentOrders table tr td:last-child {
+.details .recentBugs table tr td:last-child {
   text-align: end;
 }
-.details .recentOrders table tr td:nth-child(2) {
+.details .recentBugs table tr td:nth-child(2) {
   text-align: end;
 }
-.details .recentOrders table tr td:nth-child(3) {
+.details .recentBugs table tr td:nth-child(3) {
   text-align: center;
 }
-.status.delivered {
-  padding: 2px 4px;
-  background: #8de02c;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.status.pending {
-  padding: 2px 4px;
-  background: #e9b10a;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.status.return {
-  padding: 2px 4px;
-  background: #f00;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.status.inProgress {
-  padding: 2px 4px;
-  background: #1795ce;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-}
+
 /*--------------------*/
+ th{
+   background-color: #4b99d8;
+
+ }
 td{
   border: 1px solid rgb(204,200,200);
   text-align: left;
@@ -369,15 +349,15 @@ td{
 tr:nth-child(even), table.list thread> tr{
   background-color: rgb(204,200,200);
 }
-.recentCustomers {
+.createTicket {
   position: relative;
   min-height: 500px;
   padding: 20px;
-  background: var(--white);
+  background-color: rgb(211, 210, 210);
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
 }
-.recentCustomers .imgBx img {
+.createTicket .imgBx img {
   position: absolute;
   top: 0;
   left: 0;
@@ -385,29 +365,34 @@ tr:nth-child(even), table.list thread> tr{
   height: 100%;
   object-fit: cover;
 }
-.recentCustomers table tr td {
+.createTicket table tr td {
   padding: 12px 10px;
 }
-.recentCustomers table tr td label {
+.createTicket table tr td label {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.2rem;
 }
-.recentCustomers table tr td input {
+.createTicket table tr td input {
   font-size: 14px;
   color: var(--black2);
 }
 
-.recentCustomers table tr:hover td h4 span {
+.createTicket table tr:hover td h4 span {
   color: var(--white);
 }
-.recentCustomers table.list{
+.createTicket table.list{
   text-align: center;
   width: 100%;
 }
-.recentCustomers table.list{
+.createTicket table.list{
   text-align: center;
   width: 100%;
+}
+
+fieldset{
+  border: none;
+
 }
 button{
   background: #eee;
@@ -424,12 +409,12 @@ button{
 button:hover{
   background:#4b99d8 ;
 }
-.recentCustomers td{
+.createTicket td{
   border: 1px solid rgb(204,200,200);
   text-align: left;
   padding: 8px 15px;
 }
-input[type="text"],input[type="number"], select, input[type="date"]{
+input[type="text"],input[type="number"], select, input[type="date"], textarea{
   width:91%;
   padding:12px 20px;
   margin:8px 0;
@@ -483,7 +468,7 @@ input[type="reset"]:hover{
   .details {
     grid-template-columns: 1fr;
   }
-  .recentOrders {
+  .recentBugs {
     overflow-x: auto;
   }
   .status.inProgress {

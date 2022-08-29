@@ -117,47 +117,47 @@
                     </div>
 
                     <div class="iconBx">
-                        <ion-icon name="eye-outline"></ion-icon>
+                        <ion-icon name="eye-outline" id="eye"></ion-icon>
                     </div>
                 </div>
 
                 <div class="card">
                     <div>
-                        <div class="numbers">80</div>
+                        <div class="numbers">80</div><!--Number of bugs ready-->
                         <div class="cardName">Ready:</div>
                     </div>
 
                     <div class="iconBx">
-                        <ion-icon name="cart-outline"></ion-icon>
+                        <ion-icon name="cart-outline" id="cart"></ion-icon>
                     </div>
                 </div>
 
                 <div class="card">
                     <div>
-                        <div class="numbers">284</div>
-                        <div class="cardName">In Progress</div>
+                        <div class="numbers">284</div><!--Number of bugs in progress-->
+                        <div class="cardName">In Progress:</div>
                     </div>
 
                     <div class="iconBx">
-                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                        <ion-icon name="laptop" id="laptop"></ion-icon>
                     </div>
                 </div>
 
                 <div class="card">
                     <div>
-                        <div class="numbers">$7,842</div><!--Number of bugs completed-->
-                        <div class="cardName">Done</div>
+                        <div class="numbers">842</div><!--Number of bugs completed-->
+                        <div class="cardName">Done:</div>
                     </div>
 
                     <div class="iconBx">
-                        <ion-icon name="cash-outline"></ion-icon>
+                        <ion-icon name="happy" id="done"></ion-icon>
                     </div>
                 </div>
             </div>
 
             <!-- ================ Order Details List ================= -->
             <div class="details">
-                <div class="recentOrders">
+                <div class="recentBugs">
                     <div class="cardHeader">
                         <h2>Tickets</h2>
                         <a href="#" class="btn">View All</a>
@@ -170,19 +170,22 @@
                                 -->
                                 <th>Employee</th>
                                 <th>Target Date</th>
-                                <th>Status</th>
-                                <th>Priority</th>
+                                <th>Status</th><!--A status of the issue [open/ resolved/ overdue] -->
+                                <th>Priority</th><!--Priority of the issue [ low/ medium/ high] -->
+                                <th>Bug Summary</th>
                                 <th>Edit/Delete</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
                             
                         </tbody>
+                       
                     </table>
                 </div>
 
                 <!-- ================= New Customers ================ -->
-                <div class="recentCustomers">
+                <div class="createTicket">
                     <div class="cardHeader">
                         <h2>Create Ticket</h2>
                     </div>
@@ -191,13 +194,14 @@
                         <tr>
                             <td>
                                 <form autocomplete="off" onsubmit="onFormSubmit()">
+                                    <fieldset>
                                     <div>
-                                        <label for="productCode">Project Name</label>
-                                        <input type="text" name="productCode" id="productCode">
+                                        <label for="projectName">Project Name</label>
+                                        <input type="text" name="projectName" id="projectName">
                                     </div>
                                     <div>
-                                        <label for="product">Employee</label>
-                                        <select name="product" id="product">
+                                        <label for="employee">Employee</label>
+                                        <select name="employee" id="employee">
                                             <option value="Jack">Jack</option>
                                             <option value="Lisa">Lisa</option>
                                             <option value="Mike">Mike</option>
@@ -206,15 +210,15 @@
                                         
                                     </div>
                                     <div>
-                                        <label for="qty">Target Date</label>
-                                        <input type="date" name="qty" id="qty">
+                                        <label for="targetDate">Target Date</label>
+                                        <input type="date" name="targetDate" id="targetDate">
                                     </div>
                                     <div>
-                                        <label for="perPrice">Status</label>
-                                        <select name="perPrice" id="perPrice">
-                                            <option value="Open">Open</option>
-                                            <option value="Resolved">Resolved</option>
-                                            <option value="Overdue">Overdue</option>
+                                        <label for="status">Status</label>
+                                        <select name="status" id="status">
+                                            <option value="Open" style="color: blue;">Open</option>
+                                            <option value="Resolved" style="color: green;">Resolved</option>
+                                            <option value="Overdue" style="color: red;">Overdue</option>
                                             
                                         </select>
                                         
@@ -223,14 +227,20 @@
                                     <div>
                                         <label for="priority">Priority</label>
                                         <select name="priority" id="priority">
-                                            <option value="Low">Low</option>
+                                            <option value="Low" id="Low">Low</option>
                                             <option value="Midium">Midium</option>
                                             <option value="High">High</option>
                                          
                                         </select>
                                         
                                     </div>
-                
+                                    </fieldset>
+                                    <fieldset>
+                                    <div>
+                                        <label for="bugSummary">Bug Summary</label>
+                                        <textarea name="bugSummary" id="bugSummary" placeholder="Bug Summary"></textarea>
+                                    </div>
+                                </fieldset>
                                     <div class="form_action--button">
                                         <input type="submit" value="Submit">
                                         <input type="reset" value="Reset">
@@ -239,6 +249,7 @@
                 
                                 <td>
                         </tr>
+
                     </table>
                 </div>
             </div>
