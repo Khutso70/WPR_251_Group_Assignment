@@ -135,3 +135,66 @@ if (choosedFile) {
 }
 
 });
+
+//Search function
+function Search(item){
+        var collection = document.getElementsByClassName("employee");
+        for (i = 0; i < collection.length; i++)
+        {
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                collection[i].style.display = "block";
+            } 
+            else{
+                    collection[i].style.display = "none";
+                }
+            
+        }
+    }
+    function Search(item){
+        var collection = document.getElementsByClassName("projectName");
+        for (i = 0;i < collection.length; i++){
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                collection[i].style.display = "block";
+            } 
+            else{
+                    collection[i].style.display = "none";
+                }
+            
+        }
+    }
+    function Search(item){
+        var collection = document.getElementsByClassName("targetDate");
+        for (i = 0;i < collection.length; i++){
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                collection[i].style.display = "block";
+            } 
+            else{
+                    collection[i].style.display = "none";
+                }
+            
+        }
+    }
+    function Search(item){
+        var collection = document.getElementsByClassName("status");
+        for (i = 0;i < collection.length; i++){
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                collection[i].style.display = "block";
+            } 
+            else{
+                    collection[i].style.display = "none";
+                }
+            
+        }
+    }
+    function Search(item){
+        var collection = document.getElementsByClassName("priority");
+        for (i = 0;i <collection.length; i++){
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                collection[i].style.display = "block";
+            } 
+            else{
+                    collection[i].style.display = "none";
+                }
+            
+        }
+    }
