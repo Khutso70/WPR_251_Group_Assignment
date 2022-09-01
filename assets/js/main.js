@@ -115,3 +115,86 @@ function changeColor(){
   document.getElementById('storeList').getElementsByClassName("Low").changeColor="red";
   }
 }
+//Update profile image or choose from the list
+const imgDiv = document.querySelector('.user');
+const img = document.querySelector('#thePFP');
+const file = document.querySelector('#file');
+
+file.addEventListener('change', function(){
+  // this refers to the file
+  const choosedFile = this.files[0];
+
+if (choosedFile) {
+  const reader = new FileReader();
+
+  reader.addEventListener('load', function(){
+    img.setAttribute('src', reader.result);
+  });
+
+  reader.readAsDataURL(choosedFile);
+}
+
+});
+
+//Search function
+function Search(item){
+        var collection = document.getElementsByClassName("employee");
+        for (i = 0; i < collection.length; i++)
+        {
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                collection[i].style.display = "block";
+            } 
+            else{
+                    collection[i].style.display = "none";
+                }
+            
+        }
+    }
+    function Search(item){
+        var collection = document.getElementsByClassName("projectName");
+        for (i = 0;i < collection.length; i++){
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                collection[i].style.display = "block";
+            } 
+            else{
+                    collection[i].style.display = "none";
+                }
+            
+        }
+    }
+    function Search(item){
+        var collection = document.getElementsByClassName("targetDate");
+        for (i = 0;i < collection.length; i++){
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                collection[i].style.display = "block";
+            } 
+            else{
+                    collection[i].style.display = "none";
+                }
+            
+        }
+    }
+    function Search(item){
+        var collection = document.getElementsByClassName("status");
+        for (i = 0;i < collection.length; i++){
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                collection[i].style.display = "block";
+            } 
+            else{
+                    collection[i].style.display = "none";
+                }
+            
+        }
+    }
+    function Search(item){
+        var collection = document.getElementsByClassName("priority");
+        for (i = 0;i <collection.length; i++){
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                collection[i].style.display = "block";
+            } 
+            else{
+                    collection[i].style.display = "none";
+                }
+            
+        }
+    }
